@@ -1,0 +1,19 @@
+@import '@/scss/_mixins';
+
+.heading {
+  text-align: center;
+  @include breakpoint(desktop) {
+    text-align: left;
+    max-width: 624px;
+  }
+}
+
+.backgroundGradient {
+  background: linear-gradient(
+    to top left,
+    var(--white) 0%,
+    var(--orange-5) 50%,
+    var(--white) 50%,
+    var(--orange-5) 100%
+  );
+}

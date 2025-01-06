@@ -1,0 +1,122 @@
+@import '@/scss/_mixins';
+
+.decoration {
+  content: '';
+  width: 600px;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  @include breakpoint(desktop) {
+    width: 17px;
+  }
+}
+
+.optionButtonWrapper {
+  border-width: 0;
+  background: none;
+  position: relative;
+  display: flex;
+  &:disabled {
+    color: inherit;
+    svg {
+      cursor: default;
+    }
+  }
+  &:before {
+    @extend .decoration;
+    left: 0;
+    transform: translate(-600px, -50%);
+    background-color: var(--black-40);
+    @include breakpoint(desktop) {
+      transform: translate(-17px, -50%);
+    }
+  }
+  &:after {
+    @extend .decoration;
+    right: 0;
+    transform: translate(600px, -50%);
+    background-color: var(--black-40);
+    @include breakpoint(desktop) {
+      transform: translate(17px, -50%);
+    }
+  }
+  &:hover:not(:disabled) {
+    &:before,
+    &:after {
+      background-color: var(--orange-100);
+    }
+    path {
+      stroke: var(--orange-100);
+    }
+  }
+  svg {
+    cursor: pointer;
+    path {
+      stroke: var(--black-40);
+    }
+    .hexagon {
+      fill: var(--white);
+    }
+  }
+  &.selected {
+    &:before,
+    &:after {
+      background-color: var(--orange-100);
+    }
+    svg {
+      path {
+        stroke: var(--orange-100);
+      }
+      .hexagon {
+        fill: var(--orange-5);
+      }
+    }
+  }
+  &.correct {
+    &:before,
+    &:after {
+      background-color: var(--green-100);
+    }
+    svg {
+      path {
+        stroke: var(--green-100);
+      }
+      .hexagon {
+        fill: var(--green-5);
+      }
+    }
+  }
+  &.wrong {
+    &:before,
+    &:after {
+      background-color: var(--red-100);
+    }
+    svg {
+      path {
+        stroke: var(--red-100);
+      }
+      .hexagon {
+        fill: var(--red-5);
+      }
+    }
+  }
+  .textWrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 24px;
+    @include breakpoint(desktop) {
+      left: 32px;
+    }
+    .letter {
+      @include text(label);
+      color: var(--orange-100);
+    }
+    .text {
+      @include text(label);
+    }
+  }
+}

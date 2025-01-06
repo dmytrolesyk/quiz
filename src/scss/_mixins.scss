@@ -1,0 +1,66 @@
+$tabletSiteWidth: 768px;
+$desktopSiteWidth: 1024px;
+$desktopMediumSiteWidth: 1280px;
+$desktopLargeSiteWidth: 1400px;
+
+@mixin breakpoint($class) {
+  @if $class == tablet {
+    @media (min-width: $tabletSiteWidth) {
+      @content;
+    }
+  } @else if $class == desktop {
+    @media (min-width: $desktopSiteWidth) {
+      @content;
+    }
+  } @else if $class == desktop-medium {
+    @media (min-width: $desktopMediumSiteWidth) {
+      @content;
+    }
+  } @else if $class == desktop-large {
+    @media (min-width: $desktopLargeSiteWidth) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint mixin supports: tablet, desktop, desktop-medium, desktop-large";
+  }
+}
+
+@mixin text-sizing($fontSize, $fontWeight, $lineHeight: 1, $letterSpacing: normal) {
+  @if ($fontSize) {
+    font-size: $fontSize;
+  }
+  @if ($fontWeight) {
+    font-weight: $fontWeight;
+  }
+
+  line-height: $lineHeight;
+  letter-spacing: $letterSpacing;
+}
+
+@mixin text($type) {
+  @if ($type == button) {
+    color: var(--white);
+    @include text-sizing(14px, 600, 1.16);
+    @include breakpoint(desktop) {
+      @include text-sizing(20px, 600, 1.16);
+    }
+  }
+  @if ($type == label) {
+    @include text-sizing(14px, 400, 1.16);
+    @include breakpoint(desktop) {
+      @include text-sizing(20px, 400, 1.16);
+    }
+  }
+  @if ($type == h1) {
+    @include text-sizing(32px, 600, 1.16);
+    @include breakpoint(desktop) {
+      @include text-sizing(56px, 600, 1.16);
+    }
+  }
+  @if ($type == h2) {
+    @include text-sizing(18px, 600, 1.16);
+    @include breakpoint(desktop) {
+      @include text-sizing(32px, 600, 1.16);
+    }
+  }
+}

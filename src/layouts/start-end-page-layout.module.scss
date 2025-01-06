@@ -1,0 +1,32 @@
+@import '@/scss/_mixins';
+
+.wrapper {
+  padding: 80px 16px 48px 16px;
+  height: 100vh;
+  @include breakpoint(desktop) {
+    padding: 230px 80px 80px 80px;
+  }
+  .flexContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    height: 100%;
+    @include breakpoint(desktop) {
+      flex-direction: row;
+      height: auto;
+    }
+  }
+  .infoWrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    @include breakpoint(desktop) {
+      gap: 64px;
+      align-items: flex-start;
+    }
+  }
+}

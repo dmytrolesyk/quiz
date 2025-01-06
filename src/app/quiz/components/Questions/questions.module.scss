@@ -1,0 +1,51 @@
+@import '@/scss/_mixins';
+
+.questionSection {
+  padding-top: 136px;
+  padding-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  @include breakpoint(desktop-large) {
+    padding: 133px 141px 122px 80px;
+  }
+  .question {
+    padding: 0 16px;
+    text-align: center;
+    @include breakpoint(desktop) {
+      text-align: left;
+      max-width: 624px;
+      padding: 0 0 0 80px;
+    }
+    @include breakpoint(desktop-large) {
+      padding: 0;
+    }
+  }
+  .answers {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      max-height: 440px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      @include breakpoint(desktop-large) {
+        padding-left: 17px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 34px;
+        row-gap: 32px;
+      }
+    }
+    li {
+      @include breakpoint(desktop) {
+        max-width: calc(50% - 34px);
+      }
+    }
+  }
+}

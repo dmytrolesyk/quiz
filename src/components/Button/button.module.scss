@@ -1,0 +1,27 @@
+@import '@/scss/_mixins';
+
+.button {
+  @include text(button);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 0;
+  border-radius: 8px;
+  background-color: var(--orange-100);
+  min-width: 288px;
+  height: 48px;
+  padding: 16px 24px;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--orange-80);
+  }
+  &:focus {
+    background-color: var(--orange-120);
+  }
+
+  @include breakpoint(desktop) {
+    min-width: 296px;
+    height: 64px;
+    padding: 20px 24px;
+  }
+}

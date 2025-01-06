@@ -1,0 +1,48 @@
+@import '@/scss/_mixins';
+
+.quizPage {
+  height: 100vh;
+  position: relative;
+  @include breakpoint(desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+  .icon {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    @include breakpoint(desktop) {
+      display: none;
+    }
+  }
+  .questionSection {
+    background-color: var(--black-5);
+    height: 100%;
+    @include breakpoint(desktop) {
+      flex-grow: 1;
+    }
+  }
+  .prizeSection {
+    background-color: var(--black-5);
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in;
+    &.visible {
+      transform: translateX(0%);
+    }
+    @include breakpoint(desktop) {
+      position: unset;
+      transform: unset;
+      width: 376px;
+      background-color: var(--white);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+  }
+}

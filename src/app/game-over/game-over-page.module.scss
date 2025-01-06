@@ -1,0 +1,23 @@
+@import '@/scss/_mixins';
+
+.heading {
+  text-align: center;
+  @include breakpoint(desktop) {
+    text-align: left;
+    max-width: 624px;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include breakpoint(desktop) {
+    align-items: flex-start;
+  }
+}
+
+.totalScore {
+  opacity: 0.5;
+  margin-bottom: 8px;
+}

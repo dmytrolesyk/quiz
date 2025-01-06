@@ -1,0 +1,94 @@
+[
+  {
+    "question": "How old your elder brother was 10 years before you was born, mate?",
+    "prize": 500,
+    "answers": [
+      {
+        "answer": "10 years",
+        "correct": false
+      },
+      {
+        "answer": "11 years",
+        "correct": false
+      },
+      {
+        "answer": "12 years",
+        "correct": true
+      },
+      {
+        "answer": "15 years",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "The Ultimate Question of Life, the Universe, and Everything",
+    "prize": 1000,
+    "answers": [
+      {
+        "answer": "39",
+        "correct": false
+      },
+      {
+        "answer": "57",
+        "correct": false
+      },
+      {
+        "answer": "1245",
+        "correct": false
+      },
+      {
+        "answer": "42",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Which of these are English football clubs?",
+    "prize": 2000,
+    "answers": [
+      {
+        "answer": "Dynamo Kyiv",
+        "correct": false
+      },
+      {
+        "answer": "Liverpool",
+        "correct": true
+      },
+      {
+        "answer": "AC Milan",
+        "correct": false
+      },
+      {
+        "answer": "AFC Wimbledon",
+        "correct": true
+      },
+      {
+        "answer": "PSG",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Who is the current prime minister of Canada?",
+    "prize": 4000,
+    "answers": [
+      {
+        "answer": "Justin Trudeau",
+        "correct": true
+      },
+      {
+        "answer": "Harry Potter",
+        "correct": false
+      },
+      {
+        "answer": "Homer Simpson",
+        "correct": false
+      },
+      {
+        "answer": "Justin Timberlake",
+        "correct": false
+      }
+    ]
+  }
+]

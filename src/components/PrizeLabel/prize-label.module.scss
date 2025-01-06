@@ -1,0 +1,67 @@
+@import '@/scss/_mixins';
+
+.decoration {
+  content: '';
+  width: 600px;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  @include breakpoint(desktop) {
+    width: 69px;
+  }
+}
+
+.prizeLabelWrapper {
+  width: 240px;
+  height: 32px;
+  position: relative;
+  @include breakpoint(desktop) {
+    height: 40px;
+  }
+  path {
+    stroke: var(--black-40);
+    fill: var(--white);
+  }
+  &:before {
+    @extend .decoration;
+    left: 0;
+    transform: translate(-600px, -50%);
+    background-color: var(--black-40);
+    @include breakpoint(desktop) {
+      transform: translate(-69px, -50%);
+    }
+  }
+  &:after {
+    @extend .decoration;
+    right: 0;
+    transform: translate(600px, -50%);
+    background-color: var(--black-40);
+    @include breakpoint(desktop) {
+      transform: translate(69px, -50%);
+    }
+  }
+  .prize {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    @include text(label);
+  }
+  &.current {
+    path {
+      stroke: var(--orange-100);
+    }
+    &:before,
+    &:after {
+      background-color: var(--orange-100);
+    }
+    .prize {
+      color: var(--orange-100);
+    }
+  }
+  &.completed {
+    .prize {
+      color: var(--black-40);
+    }
+  }
+}
