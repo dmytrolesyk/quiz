@@ -3,6 +3,8 @@ import { StartEndPageLayout } from '@/layouts/StartEndPageLayout';
 import { NavButton } from '@/components/NavButton/NavButton';
 import styles from './home-page.module.scss';
 
+export const dynamic = 'force-dynamic';
+
 const StartPage: FC = () => {
   return (
     <StartEndPageLayout className={styles.backgroundGradient}>
