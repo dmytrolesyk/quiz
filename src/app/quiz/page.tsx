@@ -7,8 +7,6 @@ import { QuestionSection } from './components/Questions/QuestionSection';
 import { PrizeList } from './components/PrizeList/PrizeList';
 import styles from './quiz.module.scss';
 
-export const dynamic = 'force-dynamic';
-
 export default function Quiz() {
   const [prizeSectionVisible, setPrizeSectionVisible] = useState(false);
   return (

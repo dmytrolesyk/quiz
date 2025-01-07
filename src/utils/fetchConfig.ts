@@ -1,7 +1,8 @@
 export const fetchConfig = async () => {
-  console.log('Fetching config', process.env.NEXT_PUBLIC_URL);
   try {
-    const data = await fetch(`${process.env.NEXT_PUBLIC_URL}/config.json`).then(res => {
+    const data = await fetch(
+      'https://utfs.io/f/nTbi8t7br8oGiIN1uygZy6hGHOkMBCITxe345UPsuwqtjfmd',
+    ).then(res => {
       if (!res.ok) {
         throw new Error(`HTTP error! Status: ${res.status}`);
       }

@@ -7,8 +7,6 @@ import { formatCurrency } from '@/utils/format';
 import { useGameOverPageStoreLogic } from './store-logic';
 import styles from './game-over-page.module.scss';
 
-export const dynamic = 'force-dynamic';
-
 const GameOverPage: FC = () => {
   const { resetStore, prizeWon } = useGameOverPageStoreLogic();
   return (
