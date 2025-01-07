@@ -25,7 +25,6 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const initData = await fetchConfig();
-  console.log({ initData });
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
