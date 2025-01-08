@@ -1,8 +1,10 @@
+import '@/scss/globals.scss';
+
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
-import '@/scss/globals.scss';
-import { StoreProvider } from './StoreProvider';
 import { fetchConfig } from '@/utils/fetchConfig';
+import { StoreProvider } from './StoreProvider';
+import { ConfigSchema } from '@/schemas/store.schemas';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -25,6 +27,9 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const initData = await fetchConfig();
+  if (!ConfigSchema.safeParse({ questions: initData }).success) {
+    throw new Error('Config format is not correct');
+  }
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>

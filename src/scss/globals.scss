@@ -1,4 +1,4 @@
-@import '@/scss/_mixins';
+@use '@/scss/_mixins.scss' as *;
 
 :root {
   --black-5: #f5f5f7;

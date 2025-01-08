@@ -1,10 +1,9 @@
 import { v4 as uuidv4 } from 'uuid';
-import { ConfigI, QuizStateI } from '@/types/store.types';
+import { ConfigI, QuizStateI } from '@/schemas/store.types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 const initialState: QuizStateI = {
   currentQuestion: null,
-  selectedAnswers: [],
   questions: [],
 };
 

@@ -1,4 +1,4 @@
-@import '@/scss/_mixins';
+@use '@/scss/_mixins' as *;
 
 .decoration {
   content: '';
@@ -112,8 +112,8 @@
       left: 32px;
     }
     .letter {
-      @include text(label);
       color: var(--orange-100);
+      @include text(label);
     }
     .text {
       @include text(label);

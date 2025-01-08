@@ -1,6 +1,6 @@
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import { storeInitialized } from '@/store/slices/quiz-slice';
-import { ConfigI } from '@/types/store.types';
+import { ConfigI } from '@/schemas/store.types';
 
 export const useGameOverPageStoreLogic = () => {
   const dispatch = useAppDispatch();

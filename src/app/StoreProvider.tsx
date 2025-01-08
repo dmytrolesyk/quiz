@@ -1,7 +1,7 @@
 'use client';
 import { useRef, FC, ReactNode } from 'react';
 import { Provider } from 'react-redux';
-import { ConfigI } from '@/types/store.types';
+import { ConfigI } from '@/schemas/store.types';
 import { makeStore, AppStore } from '@/store/store';
 import { storeInitialized } from '@/store/slices/quiz-slice';
 

@@ -1,8 +1,6 @@
 export const fetchConfig = async () => {
   try {
-    const data = await fetch(
-      'https://utfs.io/f/nTbi8t7br8oGiIN1uygZy6hGHOkMBCITxe345UPsuwqtjfmd',
-    ).then(res => {
+    const data = await fetch('http://localhost:3000/config.json').then(res => {
       if (!res.ok) {
         throw new Error(`HTTP error! Status: ${res.status}`);
       }

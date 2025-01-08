@@ -1,4 +1,4 @@
-@import '@/scss/_mixins';
+@use '@/scss/_mixins' as *;
 
 .wrapper {
   padding: 80px 16px 48px 16px;
