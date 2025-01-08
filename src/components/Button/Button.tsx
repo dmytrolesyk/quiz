@@ -8,6 +8,7 @@ interface ButtonProps {
   className?: string;
 }
 export const Button: FC<ButtonProps> = ({ children, onClick, className }) => {
+  console.log('test');
   return (
     <button className={cn(styles.button, className)} onClick={onClick}>
       {children}
